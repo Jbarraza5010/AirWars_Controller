@@ -52,13 +52,13 @@ public class ListaAdyacencia {
         }
     }
 
-    private Arco encuentraPosicion(Object dato){
+    //private Arco encuentraPosicion(Object dato){
 
-    }
+    //}
 
-    private Arco encuentraPosicionAnteriorDato(Object dato){
+    //private Arco encuentraPosicionAnteriorDato(Object dato){
 
-    }
+    //}
 
     private void eliminaPrincipio(){
 
