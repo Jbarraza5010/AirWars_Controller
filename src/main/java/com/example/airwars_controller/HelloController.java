@@ -26,6 +26,15 @@ public class HelloController implements Initializable {
     private ChoiceBox<?> rutas;
 
     @FXML
+    private Text textAviones;
+
+    @FXML
+    private Text textDestruidos;
+
+    @FXML
+    private Text textFuncionando;
+
+    @FXML
     private Text textRuta;
 
 
@@ -37,5 +46,6 @@ public class HelloController implements Initializable {
             e.printStackTrace();
             System.out.println("Error creando server");
         }
+
     }
 }

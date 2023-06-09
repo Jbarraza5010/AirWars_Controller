@@ -54,10 +54,12 @@ public class ListaAdyacencia {
 
     private Arco encuentraPosicion(Object dato){
 
+        return null;
     }
 
     private Arco encuentraPosicionAnteriorDato(Object dato){
 
+        return null;
     }
 
     private void eliminaPrincipio(){
