@@ -23,6 +23,18 @@ public class Server {
         }
     }
 
+    public void sendMessageToController(String message){
+        try{
+            bufferedWriter.write(message);
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
+        }catch(IOException e){
+            e.printStackTrace();
+            System.out.println("Error enviando mensaje al controller");
+            closeAll(socket, bufferedReader, bufferedWriter);
+        }
+    }
+
     public void closeAll(Socket socket, BufferedReader bufferedReader, BufferedWriter bufferedWriter){
         try{
             if (bufferedReader != null){
