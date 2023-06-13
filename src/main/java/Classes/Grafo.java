@@ -4,15 +4,27 @@ public class Grafo {
     private NodoGrafo primero;
     private NodoGrafo ultimo;
 
+    /**
+     * Función para crear un grafo
+     */
     public Grafo(){
         primero = null;
         ultimo = null;
     }
 
+    /**
+     * Función para comprobar si un grafo está vacío
+     * @return
+     */
     public boolean grafoVacio(){
         return primero == null;
     }
 
+    /**
+     * Función para comprobar si existe un vértice
+     * @param dato
+     * @return
+     */
     public boolean existeVertice(Object dato){
         boolean existe = false;
         if(!grafoVacio()){
@@ -27,6 +39,11 @@ public class Grafo {
         return existe;
     }
 
+    /**
+     * Función para crear una arista del grafo
+     * @param origen
+     * @param destino
+     */
     public void NuevaArista(Object origen, Object destino){
         if(existeVertice(origen) && existeVertice(destino)){
             NodoGrafo posicion = primero;
@@ -37,6 +54,12 @@ public class Grafo {
         }
     }
 
+    /**
+     * Función para crear una arista con peso del grafo
+     * @param origen
+     * @param destino
+     * @param peso
+     */
     public void NuevaArista(Object origen, Object destino, float peso){
         if(existeVertice(origen) && existeVertice(destino)){
             NodoGrafo posicion = primero;
@@ -47,6 +70,10 @@ public class Grafo {
         }
     }
 
+    /**
+     * Función para crear un nuevo nodo
+     * @param dato
+     */
     public void nuevoNodo(Object dato){
         if(!existeVertice(dato)){
             NodoGrafo nodo = new NodoGrafo(dato);
@@ -74,6 +101,10 @@ public class Grafo {
         }
     }
 
+    /**
+     * Función para generar una figura tipo flecha
+     * @return
+     */
     public String toString(){
         String cadena = "";
         NodoGrafo temporal = primero;

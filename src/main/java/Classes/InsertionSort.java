@@ -1,6 +1,10 @@
 package Classes;
 
 public class InsertionSort {
+    /**
+     * Algoritmo de ordenamiento de inserción
+     * @param arr
+     */
     void sort(int arr[]){
         int n = arr.length;
         for(int i = 1; i < n; ++ i){
@@ -15,6 +19,10 @@ public class InsertionSort {
         }
     }
 
+    /**
+     * Función para imprimir el arreglo
+     * @param arr
+     */
     static void printArray(int arr[]){
         int n = arr.length;
         for(int i =0; i < n; ++i)
@@ -22,6 +30,10 @@ public class InsertionSort {
         System.out.println();
     }
 
+    /**
+     * Función prinicipal para probar el algoritmo
+     * @param args
+     */
     public static void main(String args[]){
         int arr[] = {12,11,13,5,6};
         InsertionSort ob = new InsertionSort();

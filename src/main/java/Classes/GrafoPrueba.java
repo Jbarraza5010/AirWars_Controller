@@ -24,6 +24,10 @@ public class GrafoPrueba extends Grafo{
     @FXML
     private TextArea Salida;
 
+    /**
+     * Función de botón para crear un nodo para el grafo
+     * @param event
+     */
     @FXML
     private void BtnInsertarNodo(ActionEvent event){
         String dato = Entrada.getText();
@@ -31,6 +35,9 @@ public class GrafoPrueba extends Grafo{
         Salida.setText(grafo.toString());
         Entrada.setText("");
     }
+    /**
+     * Función de botón para crear un arco para el grafo
+     */
     @FXML
     private void BtnInsertarArco(ActionEvent event){
         String origen = "";

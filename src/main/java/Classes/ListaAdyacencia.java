@@ -4,15 +4,26 @@ public class ListaAdyacencia {
     Arco primero;
     Arco ultimo;
 
+    /**
+     * Constructor para crear una lista de adyacencia
+     */
     public ListaAdyacencia(){
         primero = null;
         ultimo = null;
     }
 
+    /**
+     * Función para saber si la lista está vacía
+     * @return
+     */
     public boolean listaVacia(){
         return primero == null;
     }
 
+    /**
+     * Función para crear una nueva adyacencia entre nodos
+     * @param destino
+     */
     public void nuevaAdyacencia(Object destino){
         if(!adyacente(destino)){
             Arco nodo = new Arco(destino);
@@ -20,6 +31,11 @@ public class ListaAdyacencia {
         }
     }
 
+    /**
+     * Función para crear una nueva adyacencia entre nodos pero con peso
+     * @param destino
+     * @param peso
+     */
     public void nuevaAdyacencia(Object destino, float peso){
         if(!adyacente(destino)){
             Arco nodo = new Arco(destino, peso);
@@ -27,6 +43,11 @@ public class ListaAdyacencia {
         }
     }
 
+    /**
+     * Función para insertar un nodo en la lista
+     * @param nodo
+     * @param destino
+     */
     private void inserta(Arco nodo, Object destino) {
         if (listaVacia()) {
             primero = nodo;
@@ -78,6 +99,11 @@ public class ListaAdyacencia {
 
     }
 
+    /**
+     * Función para comprobar si existe adyacencia entre dos nodos
+     * @param dato
+     * @return
+     */
     public boolean adyacente(Object dato){
         Arco actual;
         boolean encontrado;
@@ -92,6 +118,10 @@ public class ListaAdyacencia {
         return encontrado;
     }
 
+    /**
+     * Función para crear símbolos en la prueba del grafo
+     * @return
+     */
     public String toString(){
         String cadena ="";
         Arco temporal = primero;
