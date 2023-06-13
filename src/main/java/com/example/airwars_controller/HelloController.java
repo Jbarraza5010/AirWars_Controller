@@ -52,11 +52,13 @@ public class HelloController implements Initializable {
             e.printStackTrace();
             System.out.println("Error creando server");
         }
+
         LinkedList mapa = new LinkedList();
 
         for(String i : portaviones){
             int prob = ((int) (Math.random() * (3 - 1) + 1));
             if (prob == 1){
+                server.sendMessageToController(i);
                 mapa.insertFirst(i);
             }
         }
@@ -64,6 +66,7 @@ public class HelloController implements Initializable {
         for(String i : aeropuertos){
             int prob = ((int) (Math.random() * (3 - 1) + 1));
             if (prob == 1){
+                server.sendMessageToController(i);
                 mapa.insertFirst(i);
             }
         }
