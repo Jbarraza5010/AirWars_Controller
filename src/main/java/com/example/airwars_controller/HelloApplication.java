@@ -7,7 +7,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Esta clase inicia la aplicacion del controlador aereo
+ */
 public class HelloApplication extends Application {
+    /**
+     * Funcion que abre la interfaz grafica
+     * @param stage
+     * @throws IOException
+     */
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
@@ -17,6 +25,10 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
+    /**
+     * Metodo main de la aplicacion
+     * @param args
+     */
     public static void main(String[] args) {
         launch();
     }

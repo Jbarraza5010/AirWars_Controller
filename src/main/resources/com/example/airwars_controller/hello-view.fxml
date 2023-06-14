@@ -5,11 +5,10 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #464A4D;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airwars_controller.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #464A4D;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.airwars_controller.HelloController">
    <children>
       <Text fx:id="textRuta" fill="WHITE" layoutX="256.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rutas:">
          <font>
@@ -22,13 +21,11 @@
             <Font name="Gill Sans MT" size="18.0" />
          </font>
       </Button>
-      <Text fx:id="textAviones" fill="WHITE" layoutX="238.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aviones:">
+      <Text fx:id="textAviones" fill="WHITE" layoutX="238.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aviones:">
          <font>
             <Font name="Gill Sans MT" size="36.0" />
          </font>
       </Text>
-      <HBox layoutX="25.0" layoutY="265.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;" />
-      <HBox layoutX="375.0" layoutY="265.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;" />
       <Text fx:id="textFuncionando" fill="WHITE" layoutX="48.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Funcionando">
          <font>
             <Font name="Gill Sans MT" size="30.0" />
@@ -44,5 +41,27 @@
             <Image url="@airplane.png" />
          </image>
       </ImageView>
+      <Text fx:id="avionesF" fill="WHITE" layoutX="124.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Gill Sans MT" size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="avionesD" fill="WHITE" layoutX="461.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Gill Sans MT" size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="textBuscar" fill="WHITE" layoutX="259.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Buscar">
+         <font>
+            <Font name="Gill Sans MT" size="30.0" />
+         </font>
+      </Text>
+      <Button fx:id="crear" layoutX="266.0" layoutY="333.0" mnemonicParsing="false" onAction="#clickCrear" text="Crear">
+         <font>
+            <Font name="Gill Sans MT" size="18.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="tipo" layoutX="225.0" layoutY="257.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="posicion" layoutX="225.0" layoutY="297.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
